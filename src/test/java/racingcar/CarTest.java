@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 
 public class CarTest {
 
-    private String carName = "pobi";
-    private Car car = new Car(carName);
+    private final String carName = "pobi";
+    private final Car car = new Car(carName);
 
     // Test method의 Life cycle이 어떤 형태로 진행되는지 알고 있어야 한다.
 

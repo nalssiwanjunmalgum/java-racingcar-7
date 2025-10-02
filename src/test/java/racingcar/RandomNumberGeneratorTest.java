@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
 public class RandomNumberGeneratorTest {
-    private RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+    private final RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
 
     @Test
     void 랜덤생성된수는_0_9_사이의_수() {
