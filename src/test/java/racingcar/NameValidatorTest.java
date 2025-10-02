@@ -3,6 +3,8 @@ package racingcar;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 
 public class NameValidatorTest {
     private final NameValidator nameValidator = new NameValidator();
@@ -20,6 +22,12 @@ public class NameValidatorTest {
         // pobi / pobi,jun / pobi,jun,lilka
         String acceptedInput = "pobi   ,  junied";
         assertThat(nameValidator.isValidateInput(acceptedInput)).isEqualTo(false);
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    void null_문자열은_실패(String input) {
+        assertThat(nameValidator.isValidateInput(input)).isEqualTo(false);
     }
 
     // 한번에 여러가지 parameter 테스트 하는 방법은??
