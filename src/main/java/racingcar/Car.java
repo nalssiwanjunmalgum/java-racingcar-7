@@ -9,6 +9,7 @@ public class Car {
         this.name = name;
     }
 
+    // 숫자를 받는다는 느낌인데 이동까지 커버하는 상황.. 이게 맞을까??
     public void receiveNumber(int randomNumber) {
         if (canMove(randomNumber)) {
             move();
