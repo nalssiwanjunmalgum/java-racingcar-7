@@ -9,6 +9,8 @@ public class CarTest {
     private String carName = "pobi";
     private Car car = new Car(carName);
 
+    // Test method의 Life cycle이 어떤 형태로 진행되는지 알고 있어야 한다.
+
     @Test
     void 차가_전진하면_거리는_증가한다(){
         car.move();
