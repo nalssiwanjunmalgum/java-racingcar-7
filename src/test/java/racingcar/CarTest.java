@@ -21,9 +21,9 @@ public class CarTest {
         assertThat(car.getDistance()).isEqualTo(0);
     }
 
-//    @Test
-//    void 차에는_이름이_존재한다(){
-//        Car car = new Car("pobi");
-//        assertThat(car.getName()).isEqualTo("pobi");
-//    }
+    @Test
+    void 차에는_이름이_존재한다(){
+        Car car = new Car("pobi");
+        assertThat(car.getName()).isEqualTo("pobi");
+    }
 }
