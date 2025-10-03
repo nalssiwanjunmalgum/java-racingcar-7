@@ -16,11 +16,11 @@ public class Car {
         }
     }
 
-    public void move() {
+    private void move() {
         this.distance++;
     }
 
-    public boolean canMove(int randomNumber) {
+    private boolean canMove(int randomNumber) {
         return randomNumber >= 4;
     }
 
