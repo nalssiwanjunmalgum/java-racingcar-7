@@ -3,6 +3,7 @@ package racingcar;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class RacingCars {
@@ -35,5 +36,14 @@ public class RacingCars {
 
         return racingCars.stream().filter(car -> car.getDistance() == maxDistance)
                 .collect(Collectors.toList());
+    }
+
+    // 현황 파악하기
+    public Map<String, Integer> getStatus() {
+        return racingCars.stream()
+                .collect(Collectors.toMap(
+                        Car::getName,
+                        Car::getDistance
+                ));
     }
 }
