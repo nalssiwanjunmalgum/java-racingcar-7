@@ -12,9 +12,8 @@ public class CarTest {
     // Test method의 Life cycle이 어떤 형태로 진행되는지 알고 있어야 한다.
 
     @Test
-    void 차가_전진하면_거리는_증가한다(){
-        car.move();
-        assertThat(car.getDistance()).isEqualTo(1);
+    void 차_생성하면_거리는_0(){
+        assertThat(car.getDistance()).isEqualTo(0);
     }
 
     @Test

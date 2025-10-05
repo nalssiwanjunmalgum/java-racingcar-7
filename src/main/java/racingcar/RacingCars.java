@@ -18,11 +18,13 @@ public class RacingCars {
         return new ArrayList<>(racingCars);
     }
 
-    // 라운드 진행하기 (한 라운드 당)
-    public void movePerRound() {
-        List<Integer> randomNumbers = RandomNumberGenerator.generateNRandomNumbers(racingCars.size());
-        for(int i = 0 ; i < racingCars.size(); i++) {
-            racingCars.get(i).receiveNumber(randomNumbers.get(i));
+    // 라운드 하나 진행하기
+    public void movePerRound(RandomNumbers randomNumbers) {
+        // ! RandomNumbers 와 크기가 서로 다른 경우에는??
+        for(int i = 0; i < racingCars.size(); i++) {
+            Car car = racingCars.get(i);
+            int randomNumber = randomNumbers.getNumberByIndex(i);
+            car.receiveNumber(randomNumber);
         }
     }
 
