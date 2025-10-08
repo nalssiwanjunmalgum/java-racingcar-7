@@ -19,6 +19,8 @@ public class GameOutputScreen {
             int distance = entry.getValue();
             System.out.printf(ROUND_LINE, carName, DISTANCE_SYMBOL.repeat(distance));
         }
+
+        printLine();
     }
 
     public void printWinner(RacingCars racingCars) {
@@ -27,5 +29,13 @@ public class GameOutputScreen {
         String formattedWinners = winner.stream().map(Car::getName).collect(Collectors.joining(", "));
 
         System.out.printf(WINNER_LINE, formattedWinners);
+    }
+
+    public void printStatusComment() {
+        System.out.println("실행 결과");
+    }
+
+    public void printLine() {
+        System.out.println();
     }
 }

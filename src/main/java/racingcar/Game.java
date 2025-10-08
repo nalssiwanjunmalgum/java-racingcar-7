@@ -24,4 +24,8 @@ public class Game {
     public RacingCars getRacingCars() {
         return racingCars;
     }
+
+    public int getRoundNumber() {
+        return roundNumber;
+    }
 }
